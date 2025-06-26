@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>致余澳老师的一封信</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const password = prompt("请输入访问密码：");
+            const allowed = "dryuao";
+            const container = document.querySelector('.container');
+            if (password === allowed) {
+                container.style.display = 'block';
+            } else {
+                document.body.innerHTML = "<h2 style='color: #c00; text-align: center; margin-top: 100px;'>密码错误，访问被拒绝。</h2>";
+            }
+        });
+    </script>
+
+    <style>
+        body {
+            /* Changed font-family to prioritize 'Ma Shan Zheng' for a handwritten style */
+            font-family: "华文行楷", "微软雅黑", "宋体", "黑体", SimSun, SimHei, sans-serif;
+            background: linear-gradient(135deg, #F4F4F4 0%, #BBD9D6 100%); /* Light background from new palette */
+            color: #4f586B; /* Main text color */
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff; /* Container background */
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+            border: 1px solid #6BBC46; /* Soft border from new palette */
+            display: none;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px dashed #A5CC5B; /* Soft dashed inner border from new palette */
+            border-radius: 15px;
+            pointer-events: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #396251; /* Deeper header color */
+            animation: slideInLeft 1s ease-out;
+        }
+        .header p {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.9rem;
+            color: #61B673; /* Salutation color */
+            text-align: left;
+            animation: slideInRight 1s ease-out 0.3s;
+        }
+        .paragraph {
+            margin-bottom: 25px;
+            text-indent: 2em;
+            animation: floatUp 1s ease-out forwards;
+            opacity: 0;
+            font-size: 1.3rem;
+            color: #003300;
+        }
+        .signature {
+            text-align: right;
+            margin-top: 50px;
+            font-style: italic;
+            color: #6B8E23; /* Softer signature color */
+            animation: fadeIn 1.5s ease-out 2s;
+        }
+        .signature .name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .signature .date {
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from { transform: translateX(-80%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideInRight {
+            from { transform: translateX(80%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes floatUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .music-control-button {
+                bottom: 10px;
+                right: 10px;
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .header p {
+                font-size: 1.2rem;
+            }
+            .paragraph {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Music control button */
+        .music-control-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #88C788; /* Button background from new palette */
+            color: #4f6B4F; /* Button text color */
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: 1px solid #749674; /* Slightly darker border for button */
+            cursor: pointer;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .music-control-button:hover {
+            background-color: #9BC2A5; /* Button hover background from new palette */
+            color: #4f6B4F; /* Button hover text color (kept same for contrast) */
+            transform: translateY(-2px);
+        }
+
+        .music-control-button .icon {
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>致余澳老师的一封信</h1>
+        <p>尊敬的余老师：</p>
+    </header>
+    <section class="content" id="letterContent">
+        <p class="paragraph" style="animation-delay: 0.6s;">
+            回望这学期的学习旅程，补退选时那次看似偶然的选择，如今想来，却仿佛蕴含着一种“必然”的深意。有幸在众多课程中，选修了您的《中国特色社会主义政治经济学》，也因此开启了一段宝贵的思想之旅。
+        </p>
+        <p class="paragraph" style="animation-delay: 1.2s;">
+            自三月以来的每一堂课，都让我真切感受到：政治经济学并非一门空洞抽象的理论体系，而是一种观察现实、理解国家、认识世界的有力方法。在您的课堂上，我们不止步于教材的字句，而是在您的引导下，循着逻辑的脉络、问题的线索，走向更广阔的认知空间。无论是对当前国内经济形势的分析，还是对国际格局的洞察，您总能以严谨而不失温度的方式，带我们深入思考。
+        </p>
+        <p class="paragraph" style="animation-delay: 1.8s;">
+            课堂内外的点滴分享，尤令我印象深刻。您讲述“成都”名字的由来，“一年成邑，二年成都”的古语，让人从历史的纵深中感受到一方水土的节奏与坚韧。更令我敬佩的是，在讲授严谨理论之余，您总能适时引入现实关切与学术思维的探讨。例如，您教导我们如何讲好故事、如何将专业回答扎根于理论，强调“从具体数据中抽象出本质认知”“把握理论与现实之间的张力”，并以四川发展重工业为例，启发我们观察区域政策背后的经济逻辑。
+        </p>
+        <p class="paragraph" style="animation-delay: 2.4s;">
+            在科研训练与学术规范方面，您倾囊相授。给我们提供参赛建议时，您提醒选题不宜过于宏大，若进行问卷调查，样本数量控制在两千至三千份之间为宜，并强调问卷设计的科学性。同时，您细致讲解结题标题间的信息协调、文献综述的归纳思路，以及如何恰当地为各级标题编号......正是这些具体细微的指导，逐步拓宽了我们对学术世界的理解，让我第一次深刻体会到：真正的经济学研究，既需仰望星空，也要脚踏实地。
+        </p>
+        <p class="paragraph" style="animation-delay: 3.0s;">
+            您对课堂答题的指导同样细致入微。即使我们思路模糊，您也总是耐心引导，带我们回到问题起点，层层推进，特别是您强调“答题要使用专业术语，要有条理地表达思路”，这让我深刻认识到，真正的学习不仅在于“会”，更在于能“规范、清晰、有逻辑地表达”。这些要求，也在悄然塑造着我的思维方式与表达习惯。更重要的是，您的课程悄然改变了我对学科的态度。此前我对文科课程常感吃力，甚至有些畏难，但在您的课堂上，我不仅能够专注聆听每一讲内容，更逐渐对政治经济学乃至更广的文科领域产生了兴趣。这种转变，并非因为难度降低，而是您以深邃的思维与清晰的讲授，让我真切感受到：这些内容并非遥不可及，而是可以深入其中，也值得深入思考。这或许是您带给我最深远的影响之一。
+        </p>
+        <p class="paragraph" style="animation-delay: 3.6s;">
+            当课程的帷幕轻轻落下，您所传递的思想启迪与学术热忱，依然在我心中回响，如余韵悠长。 您学养深厚，授课逻辑清晰又饱含温度，既有海外深造的视野，又始终扎根教学一线。在您身上，我看到了优秀大学教师的典范：目光深远，却脚踏实地；对知识严谨，对学生真诚。
+        </p>
+        <p class="paragraph" style="animation-delay: 4.2s;">
+            感谢这一学期的陪伴与教诲，也感谢在这个春天，命运带我走进了您的课堂，使我受益良多。愿您在科研道路上不断精进，在教学中持续播撒智慧；愿您身体康健，工作顺遂，事业日新；愿您如和煦的阳光，温润而坚定，照亮更多学子的求知之路。若有幸，我期盼未来能在更高处，再次聆听您的教诲。师恩难忘，感恩相遇！
+        </p>
+    </section>
+
+    <footer class="signature">
+        <p class="name">您的学生 黄湘淇 敬上</p>
+        <p class="date">2025年6月</p>
+    </footer>
+</div>
+
+<audio id="backgroundMusic" loop autoplay>
+    <source src="王一井 - 河畔的风.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggleButton" class="music-control-button">
+    <span class="icon">♪</span>
+    <span id="musicStatusText">暂停音乐</span>
+</button>
+
+<script>
+    const audio = document.getElementById('backgroundMusic');
+    const musicToggleButton = document.getElementById('musicToggleButton');
+    const musicStatusText = document.getElementById('musicStatusText');
+    let isPlaying = true; // Initial state set to true, as we attempt autoplay
+
+    // Set volume to maximum (1.0)
+    audio.volume = 1.0;
+
+    // Attempt to play audio immediately
+    // This is wrapped in a 'DOMContentLoaded' event listener to ensure the DOM is loaded before execution.
+    // However, most browsers will still prevent autoplay without user interaction.
+    document.addEventListener('DOMContentLoaded', () => {
+        audio.play()
+            .then(() => {
+                // Autoplay successful
+                musicStatusText.textContent = '暂停音乐';
+                isPlaying = true;
+            })
+            .catch(error => {
+                // Autoplay failed, likely due to browser policies
+                console.warn('Autoplay music failed, user interaction required:', error);
+                musicStatusText.textContent = '播放音乐'; // If autoplay fails, reset text to 'Play Music'
+                isPlaying = false;
+            });
+    });
+
+    musicToggleButton.addEventListener('click', () => {
+        if (isPlaying) {
+            audio.pause();
+            musicStatusText.textContent = '播放音乐';
+            isPlaying = false;
+        } else {
+            audio.play()
+                .then(() => {
+                    musicStatusText.textContent = '暂停音乐';
+                    isPlaying = true;
+                })
+                .catch(error => {
+                    console.error('Music playback failed:', error);
+                    musicStatusText.textContent = '播放失败 (点击以重试)';
+                });
+        }
+    });
+
+    // This listener handles cases where audio stops for other reasons, ensuring it tries to loop if it was playing.
+    audio.addEventListener('ended', () => {
+        // If audio ends and it was in a playing state, try to replay
+        if (isPlaying) {
+            audio.currentTime = 0; // Reset to beginning
+            audio.play();
+        }
+    });
+
+    // Apply animation delays to each paragraph
+    document.querySelectorAll('.paragraph').forEach((p, index) => {
+        p.style.animationDelay = `${0.5 + index * 0.5}s`;
+    });
+</script>
+</body>
+</html>
